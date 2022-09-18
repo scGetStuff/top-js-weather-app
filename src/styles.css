@@ -1,0 +1,50 @@
+:root {
+    --clr-primary: rgb(20, 20, 20);
+    --clr-secondary: rgb(30, 30, 30);
+    --clr-txt: rgb(230, 230, 230);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+/* body * {
+    outline: 1px solid black;
+} */
+
+body {
+    background-color: var(--clr-primary);
+    color: var(--clr-txt);
+}
+
+header,
+main,
+footer {
+    padding: 1rem;
+}
+
+/* TODO: SASS for nesting, eliminate duplicate crap */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.col {
+    flex-direction: column;
+}
