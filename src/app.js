@@ -1,6 +1,8 @@
 "use strict";
 
 import styles from "./styles.css";
+import { data as testData } from "./sample";
+import { parseWeatherJSON } from "./parser";
 
 const cl = console.log;
 
@@ -13,13 +15,14 @@ async function doStuffAwait(city) {
     const main = document.querySelector("main");
 
     while (main.firstChild) main.removeChild(main.firstChild);
-    
+
     const response = await fetch(uri, { mode: "cors" });
     if (response.status != 200) {
         searchResults.innerText = response.status;
         return;
     }
     const data = await response.json();
+    cl(data);
     searchResults.innerText = JSON.stringify(data);
     main.appendChild(searchResults);
 }
@@ -47,5 +50,20 @@ function doStuff(city) {
     main.appendChild(searchResults);
 }
 
-doStuffAwait("London");
-//doStuff("London");
+function test() {
+    console.clear();
+
+    const searchResults = document.createElement("div");
+    const main = document.querySelector("main");
+
+    while (main.firstChild) main.removeChild(main.firstChild);
+
+    const data = parseWeatherJSON(testData);
+    searchResults.innerText = JSON.stringify(data);
+
+    main.appendChild(searchResults);
+}
+
+test();
+// doStuffAwait("London");
+// doStuff("London");

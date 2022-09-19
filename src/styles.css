@@ -29,6 +29,10 @@ body {
 body {
     background-color: var(--clr-primary);
     color: var(--clr-txt);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header,
@@ -37,14 +41,14 @@ footer {
     padding: 1rem;
 }
 
-/* TODO: SASS for nesting, eliminate duplicate crap */
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+header,
+footer {
+    background-color: var(--clr-secondary);
+    text-align: center;
 }
 
-.col {
-    flex-direction: column;
+main {
+    flex: 1;
+
 }
+

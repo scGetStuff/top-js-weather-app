@@ -14,3 +14,4 @@ https://openweathermap.org/current#name
 `https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`
 `https://api.openweathermap.org/data/2.5/weather?q={city name},{country code}&appid={API key}`
 `https://api.openweathermap.org/data/2.5/weather?q={city name},{state code},{country code}&appid={API key}`
+`https://api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}`
