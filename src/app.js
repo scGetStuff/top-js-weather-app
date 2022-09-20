@@ -1,6 +1,7 @@
 "use strict";
 
 import styles from "./styles.css";
+// import search from "./assets/images/search-icon.svg";
 import { data as testData } from "./sample";
 import { parseWeatherJSON } from "./parser";
 
@@ -56,10 +57,10 @@ function test() {
     const searchResults = document.createElement("div");
     const main = document.querySelector("main");
 
-    while (main.firstChild) main.removeChild(main.firstChild);
+    // while (main.firstChild) main.removeChild(main.firstChild);
 
-    const data = parseWeatherJSON(testData);
-    searchResults.innerText = JSON.stringify(data);
+    // const data = parseWeatherJSON(testData);
+    // searchResults.innerText = JSON.stringify(data);
 
     main.appendChild(searchResults);
 }

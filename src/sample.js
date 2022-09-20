@@ -1,3 +1,5 @@
+"use strict";
+
 const data = {
     "coord": { "lon": -0.1257, "lat": 51.5085 },
     "weather": [

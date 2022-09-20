@@ -28,6 +28,15 @@ module.exports = {
     module: {
         rules: [
             { test: /\.css$/, use: ["style-loader", "css-loader"] },
+            { test: /\.html$/i, use: "html-loader" },
+            {
+                test: /\.(svg|ico|png|webp|jpg|gif|jpeg)$/,
+                type: "asset/resource",
+                generator: {
+                    // filename: "assets/images/[name]-[hash][ext]",
+                    filename: "assets/images/[name][ext]",
+                },
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,

@@ -1,5 +1,6 @@
-// TODO: i hate javascript, should define a class
+"use strict";
 
+// TODO: i hate javascript, should define a class
 function parseWeatherJSON(data) {
     const weather = new Array(data.weather.length);
 
