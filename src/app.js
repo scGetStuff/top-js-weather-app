@@ -1,9 +1,8 @@
 "use strict";
 
 import styles from "./styles.css";
-// import search from "./assets/images/search-icon.svg";
-import { data as testData } from "./sample";
-import { parseWeatherJSON } from "./parser";
+import * as Data from "./data";
+import * as DOMStuff from "./DOMStuff";
 
 const cl = console.log;
 
@@ -51,20 +50,9 @@ function doStuff(city) {
     main.appendChild(searchResults);
 }
 
-function test() {
-    console.clear();
-
-    const searchResults = document.createElement("div");
-    const main = document.querySelector("main");
-
-    // while (main.firstChild) main.removeChild(main.firstChild);
-
-    // const data = parseWeatherJSON(testData);
-    // searchResults.innerText = JSON.stringify(data);
-
-    main.appendChild(searchResults);
-}
-
-test();
+console.clear();
+Data.loadTest();
+DOMStuff.bind();
+DOMStuff.renderData();
 // doStuffAwait("London");
 // doStuff("London");
