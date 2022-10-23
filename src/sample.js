@@ -1,6 +1,6 @@
 "use strict";
 
-const apiJSON = {
+const apiDataMock = {
     coord: { lon: -0.1257, lat: 51.5085 },
     weather: [
         {
@@ -36,4 +36,4 @@ const apiJSON = {
     cod: 200,
 };
 
-export { apiJSON };
+export { apiDataMock };

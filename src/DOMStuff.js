@@ -4,7 +4,7 @@ import * as Data from "./data";
 
 const cl = console.log;
 const search = document.getElementById("search");
-const searchResults = document.querySelector(".weather");
+const content = document.querySelector(".weather");
 
 function bind() {
     click("searchButton", searchEvent);
@@ -16,15 +16,15 @@ function bind() {
 
 function searchEvent(event) {
     const city = search.value;
-    alert(city);
+    Data.loadCity(city, renderData);
 }
 
 function renderData() {
-    searchResults.innerHTML = "";
+    content.innerHTML = "";
 
     createP(`${Data.myData.city}, ${Data.myData.country}`);
 
-    Data.myData.weather.forEach(element => {
+    Data.myData.weather.forEach((element) => {
         createIMG(element.iconURI, element.description);
     });
 
@@ -37,7 +37,7 @@ function renderData() {
     function createP(value) {
         const p = document.createElement("p");
         p.innerText = value;
-        searchResults.appendChild(p);
+        content.appendChild(p);
     }
 
     function createIMG(src, alt) {
@@ -50,11 +50,8 @@ function renderData() {
         img.alt = alt;
         div.appendChild(span);
         div.appendChild(img);
-        searchResults.appendChild(div);
+        content.appendChild(div);
     }
-
 }
-
-
 
 export { bind, renderData };

@@ -51,8 +51,9 @@ function doStuff(city) {
 }
 
 console.clear();
-Data.loadTest();
 DOMStuff.bind();
+Data.loadMock();
 DOMStuff.renderData();
+
 // doStuffAwait("London");
-// doStuff("London");
+// doStuff("Philadelphia");
