@@ -8,6 +8,8 @@ From spec
 - change the look of the page based on the data
 - Optional: add a ‘loading’ component that displays while asynch code runs
 
+As far as changing the look, I'm just doing the weather icon.
+Not doing the loading thing, it is pointless, the API comes back too fast.
 
 API docs
 https://openweathermap.org/current#name
