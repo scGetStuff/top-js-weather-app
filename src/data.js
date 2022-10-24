@@ -13,12 +13,18 @@ function loadCity(city, cb) {
 
     fetch(uri, { mode: "cors" })
         .then((response) => {
-            if (response.status != 200) throw new Error(response.status);
+            if (response.status != 200)
+                throw new Error(`${response.status}\n${response.statusText}`);
             return response.json();
         })
         .then((data) => {
             parseWeatherJSON(data);
-            if (cb) cb();
+            if (cb) {
+                // degugging hack
+                // document.querySelector(".stuff").textContent =
+                //     JSON.stringify(data);
+                cb();
+            }
         })
         .catch(alert);
 }
