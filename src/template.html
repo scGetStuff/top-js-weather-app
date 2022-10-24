@@ -18,11 +18,39 @@
                     />
                 </button>
             </div>
-            <!-- <div class="units">
-                <button type="button" id="unitButton"></button>
-            </div> -->
-            <div class="weather"></div>
+            <fieldset class="units">
+                <legend>Temp unit</legend>
+                <input
+                    type="radio"
+                    name="tempunit"
+                    id="fahrenheit"
+                    value="fahrenheit"
+                    checked
+                />
+                <label for="fahrenheit">Fahrenheit</label>
+                <input
+                    type="radio"
+                    name="tempunit"
+                    id="celsius"
+                    value="celsius"
+                />
+                <label for="celsius">Celsius</label>
+            </fieldset>
+            <div class="weather">
+                <p><span id="location"></span></p>
+                <p>
+                    Temperature:
+                    <span id="temp"></span>&nbsp;&nbsp;&nbsp;&nbsp;Feels like
+                    <span id="feel"></span>
+                </p>
+                <p>Pressure: <span id="pressure"></span></p>
+                <p>Humidity: <span id="humid"></span>%</p>
+                <div id="dynamic"></div>
+            </div>
         </main>
-        <footer><h3>footer</h3></footer>
+        <footer>
+            <h3>footer</h3>
+            <p class="stuff"></p>
+        </footer>
     </body>
 </html>

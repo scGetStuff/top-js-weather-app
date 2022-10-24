@@ -23,7 +23,7 @@ body {
 }
 
 /* body * {
-    outline: 1px solid black;
+    outline: 1px solid red;
 } */
 
 body {
@@ -89,10 +89,15 @@ main {
     outline: 1px solid var(--clr-txt);
 }
 
-.units {}
+.units {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    column-gap: 1rem;
+}
 
 .weather {
-    /* flex: 1; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
